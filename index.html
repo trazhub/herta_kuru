@@ -64,11 +64,7 @@
             </p>
         </div>
     </div>
-</body>
-
-</html>
-
-<script>
+    <script>
     //varible
     var audioList = [
         new Audio("audio/kuruto.mp3"),
@@ -155,3 +151,18 @@
     }
     //end counter button
 </script>
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js')
+      .then((registration) => {
+        console.log('Service Worker registered:', registration);
+      })
+      .catch((error) => {
+        console.log('Service Worker registration failed:', error);
+      });
+  }
+</script>
+</body>
+
+</html>
+
